@@ -1,17 +1,17 @@
-<script src="auth.js"></script>
+<script src="../auth.js"></script>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Мой профиль</title>
+    <title>Друзья</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="public/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../public/plugins/fontawesome-free/css/all.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="public/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="../public/dist/css/adminlte.min.css">
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -87,7 +87,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Мой профиль</h1>
+                        <h1>Друзья</h1>
                     </div>
                 </div>
             </div><!-- /.container-fluid -->
@@ -95,34 +95,14 @@
 
         <!-- Main content -->
         <section class="content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="card card-primary card-outline">
-                            <div class="card-body box-profile">
-                                <div class="text-center">
-                                    <img class="profile-user-img img-fluid img-circle"
-                                         src="public/dist/img/man.png"
-                                         alt="Аватар пользователя">
-                                </div>
-
-                                <h3 class="profile-username text-center" id="user-name"></h3>
-
-                                <ul class="list-group list-group-unbordered mb-3">
-                                    <li class="list-group-item">
-                                        <b>Почта</b> <a class="float-right" id="my-email"></a>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <b>Друзья</b> <a class="float-right" id="friends-counter"></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- /.card-body -->
-                        </div>
-                    </div>
+            <!-- Default box -->
+            <div class="card card-solid">
+                <div class="card-body pb-0">
+                    <div class="row" id="friends"></div>
                 </div>
-                <!-- /.row -->
-            </div><!-- /.container-fluid -->
+                <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
         </section>
         <!-- /.content -->
     </div>
@@ -134,12 +114,12 @@
 <!-- ./wrapper -->
 
 <!-- jQuery -->
-<script src="public/plugins/jquery/jquery.min.js"></script>
+<script src="/public/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
-<script src="public/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/public/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
-<script src="public/dist/js/adminlte.min.js"></script>
+<script src="/public/dist/js/adminlte.min.js"></script>
 <script src="script.js"></script>
-<script src="logout.js"></script>
+<script src="/logout.js"></script>
 </body>
 </html>

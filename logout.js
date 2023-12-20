@@ -11,5 +11,5 @@ async function logout() {
 
     localStorage.removeItem('token')
 
-    document.location.href = 'auth/login'
+    document.location.href = '/auth/login'
 }
