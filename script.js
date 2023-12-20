@@ -9,6 +9,11 @@ async function getProfile() {
         },
     });
 
+    if(response.status === 401) {
+        localStorage.removeItem('token')
+        document.location.href = 'auth/login'
+    }
+
     let result = await response.json();
 
     document.getElementById('user-name').innerText = result.data.name
