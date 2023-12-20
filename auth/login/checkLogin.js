@@ -14,11 +14,12 @@ async function getToken() {
         body: JSON.stringify(user)
     });
 
+    let result = await response.json();
+
     if(result.error) {
         document.querySelector('.error').innerHTML = `<h4 class="text-danger">Неверные учетные данные</h4>`
     } else {
-        let result = await response.json();
         localStorage.setItem('token', 'Bearer ' + result.access_token)
-        document.location.href = '../'
+        document.location.href = '../../'
     }
 }
