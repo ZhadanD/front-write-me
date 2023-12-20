@@ -1,1 +1,1 @@
-if(localStorage.getItem('token')) document.location.href = '../'
+if(localStorage.getItem('token')) document.location.href = '../../'

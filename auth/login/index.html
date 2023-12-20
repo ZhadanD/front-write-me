@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Авторизация</title>
 
-  <script src="auth.js"></script>
+  <script src="../auth.js"></script>
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="../public/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="../../public/plugins/fontawesome-free/css/all.min.css">
   <!-- icheck bootstrap -->
-  <link rel="stylesheet" href="../public/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <link rel="stylesheet" href="../../public/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="../public/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="../../public/dist/css/adminlte.min.css">
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
@@ -39,6 +39,9 @@
             </div>
           </div>
         </div>
+        <div>
+          <p>У вас еще нет аккаунта? <a href="../register">Зарегистрируйтесь</a>!</p>
+        </div>
         <div class="col-4">
           <button onclick="getToken()" type="button" class="btn btn-success">Войти</button>
         </div>
@@ -50,9 +53,9 @@
 <!-- /.login-box -->
 
 <!-- jQuery -->
-<script src="../public/plugins/jquery/jquery.min.js"></script>
+<script src="../../public/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
-<script src="../public/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../../public/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="checkLogin.js"></script>
 </body>
 </html>

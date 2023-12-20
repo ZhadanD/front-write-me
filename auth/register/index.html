@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Регистрация</title>
+
+  <script src="../auth.js"></script>
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../../public/plugins/fontawesome-free/css/all.min.css">
+  <!-- icheck bootstrap -->
+  <link rel="stylesheet" href="../../public/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../public/dist/css/adminlte.min.css">
+</head>
+<body class="hold-transition login-page">
+<div class="login-box">
+  <div class="card">
+    <div class="card-body login-card-body">
+      <div class="error"></div>
+      <h2 class="login-box-msg">Регистрация</h2>
+
+      <form>
+        <div class="input-group mb-3">
+          <input id="name" type="text" class="form-control" placeholder="Имя пользователя">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-user"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input id="email" type="email" class="form-control" placeholder="Почта">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-envelope"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input id="password" type="password" class="form-control" placeholder="Пароль">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input id="confirm_password" type="password" class="form-control" placeholder="Подтвердите пароль">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock"></span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p>У вас уже есть аккаунт? <a href="../login">Войдите</a> в систему!</p>
+        </div>
+        <div class="col-4">
+          <button onclick="register()" type="button" class="btn btn-success">Зарегистрироваться</button>
+        </div>
+      </form>
+    </div>
+    <!-- /.login-card-body -->
+  </div>
+</div>
+<!-- /.login-box -->
+
+<!-- jQuery -->
+<script src="../../public/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../../public/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="checkRegister.js"></script>
+</body>
+</html>

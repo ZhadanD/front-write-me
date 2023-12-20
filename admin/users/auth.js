@@ -1,4 +1,4 @@
-if(!localStorage.getItem('token')) document.location.href = '../../auth/login.html'
+if(!localStorage.getItem('token')) document.location.href = '../../auth/login/index.html'
 
 async function checkAdmin() {
     // TODO поменяй на url dashboard
@@ -17,7 +17,7 @@ async function checkAdmin() {
     if(result.error === 'Forbidden') document.location.href = '../'
     else if (result.error === 'Unauthorized') {
         localStorage.removeItem('token')
-        document.location.href = '../../auth/login.html'
+        document.location.href = '../../auth/login/index.html'
     }
 }
 
