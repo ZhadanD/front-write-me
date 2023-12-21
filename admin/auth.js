@@ -1,8 +1,7 @@
 if(!localStorage.getItem('token')) document.location.href = '../auth/login/index.html'
 
 async function checkAdmin() {
-    // TODO поменяй на url dashboard
-    const url = 'http://127.0.0.1:8000/api/admin/users'
+    const url = 'http://127.0.0.1:8000/api/admin/dashboard'
 
     let response = await fetch(url, {
         method: 'GET',

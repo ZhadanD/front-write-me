@@ -73,14 +73,6 @@
                             </p>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-align-justify"></i>
-                            <p>
-                                Сообщения
-                            </p>
-                        </a>
-                    </li>
                 </ul>
             </nav>            
             <!-- /.sidebar-menu -->
@@ -111,15 +103,7 @@
                             <div class="card border border-success mb-3" style="max-width: 18rem;">
                                 <div class="card-header">Пользователи</div>
                                 <div class="card-body">
-                                    <p class="card-text">Кол-во зарегистрированных пользователей: 0</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card border border-success mb-3" style="max-width: 18rem;">
-                                <div class="card-header">Сообщения</div>
-                                <div class="card-body">
-                                    <p class="card-text">Новые сообщения: 0</p>
+                                    <p class="card-text">Кол-во зарегистрированных пользователей: <span id="usersCounter"></span></p>
                                 </div>
                             </div>
                         </div>
@@ -164,5 +148,6 @@
 <!-- ChartJS -->
 <script src="../public/plugins/chart.js/Chart.min.js"></script>
 <script src="logout.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
