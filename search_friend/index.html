@@ -1,17 +1,17 @@
-<script src="auth.js"></script>
+<script src="/auth.js"></script>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Мой профиль</title>
+    <title>Найти друга</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="public/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="/public/plugins/fontawesome-free/css/all.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="public/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="/public/dist/css/adminlte.min.css">
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -91,50 +91,53 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
-        <section class="content-header">
+        <div class="content-header">
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Мой профиль</h1>
+                        <h1 class="m-0">Найти друга</h1>
                     </div>
-                </div>
+                </div><!-- /.row -->
             </div><!-- /.container-fluid -->
-        </section>
+        </div>
+        <!-- /.content-header -->
 
         <!-- Main content -->
         <section class="content">
             <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="card card-primary card-outline">
-                            <div class="card-body box-profile">
-                                <div class="text-center">
-                                    <img class="profile-user-img img-fluid img-circle"
-                                         src="public/dist/img/man.png"
-                                         alt="Аватар пользователя">
-                                </div>
-
-                                <h3 class="profile-username text-center" id="user-name"></h3>
-
-                                <ul class="list-group list-group-unbordered mb-3">
-                                    <li class="list-group-item">
-                                        <b>Почта</b> <a class="float-right" id="my-email"></a>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <b>Друзья</b> <a class="float-right" id="friends-counter"></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- /.card-body -->
+                <div class="container">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 id="title_table"></h3>
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Аватар</th>
+                                    <th>Имя</th>
+                                    <th>Действия</th>
+                                </tr>
+                                </thead>
+                                <tbody id="table_users"></tbody>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+                        <div class="card-footer clearfix">
+                            <ul class="pagination pagination-sm m-0 float-right" id="my_pagination"></ul>
                         </div>
                     </div>
                 </div>
-                <!-- /.row -->
-            </div><!-- /.container-fluid -->
+            </div>
         </section>
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-light">
+        <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+
     <footer class="main-footer">
         <strong>&copy; 2023 Write me.</strong> Все права защищены.
     </footer>
@@ -142,12 +145,12 @@
 <!-- ./wrapper -->
 
 <!-- jQuery -->
-<script src="public/plugins/jquery/jquery.min.js"></script>
+<script src="/public/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
-<script src="public/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/public/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
-<script src="public/dist/js/adminlte.min.js"></script>
+<script src="/public/dist/js/adminlte.min.js"></script>
 <script src="script.js"></script>
-<script src="logout.js"></script>
+<script src="/logout.js"></script>
 </body>
 </html>
