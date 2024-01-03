@@ -107,6 +107,35 @@
             <div class="card card-solid">
                 <div class="card-body pb-0">
                     <div class="row" id="friends"></div>
+
+                    <div class="container mb-4">
+                        <div class="modal fade" id="modal-secondary">
+                            <div class="modal-dialog">
+                                <div class="modal-content bg-white">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Отправка сообщения</h4>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div id="errors_or_success"></div>
+
+                                        <label for="message">Текст сообщения</label>
+                                        <textarea rows="7" id="message" name="message" placeholder="Введите сообщение" class="form-control border border-success"></textarea>
+
+                                        <br/><br/>
+                                    </div>
+                                    <div class="modal-footer justify-content-between">
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="clearTextarea()">Закрыть</button>
+                                        <button type="button" class="btn btn-success" onclick="sendMessage()">Отправить</button>
+                                    </div>
+                                </div>
+                                <!-- /.modal-content -->
+                            </div>
+                            <!-- /.modal-dialog -->
+                        </div>
+                    </div>
                 </div>
                 <!-- /.card-body -->
             </div>
