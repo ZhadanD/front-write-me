@@ -104,87 +104,94 @@
         <!-- Main content -->
         <section class="content">
             <div class="container-fluid">
-                <div class="card direct-chat direct-chat-success">
-                    <div class="card-header">
-                        <h3 class="card-title">Чат</h3>
-                        <div class="card-tools">
-                            <button type="button" class="btn btn-tool" title="Contacts" data-widget="chat-pane-toggle">
-                                <i class="fas fa-comments"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <!-- /.card-header -->
-                    <div class="card-body">
-                        <!-- Conversations are loaded here -->
-                        <div class="direct-chat-messages">
-                            <!-- Message. Default to the left -->
-                            <div class="direct-chat-msg">
-                                <div class="direct-chat-infos clearfix">
-                                    <span class="direct-chat-name float-left">Отправитель</span>
-                                    <span class="direct-chat-timestamp float-right">Время</span>
+                <div class="border border-success rounded">
+                    <ul class="contacts-list">
+                        <li>
+                            <div class="row">
+                                <div class="col">
+                                    <img class="contacts-list-img" src="/public/dist/img/man.png" alt="Аватар пользователя">
+
+                                    <h4>Ник</h4>
                                 </div>
-                                <!-- /.direct-chat-infos -->
-                                <img class="direct-chat-img" src="/public/dist/img/man.png" alt="Аватар отправителя">
-                                <!-- /.direct-chat-img -->
-                                <div class="direct-chat-text">
-                                    Текст сообщения отправителя
+                                <div class="col">
+                                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal-secondary">
+                                        Пообщаться
+                                    </button>
                                 </div>
-                                <!-- /.direct-chat-text -->
                             </div>
-                            <!-- /.direct-chat-msg -->
+                        </li>
+                    </ul>
+                </div>
 
-                            <!-- Message to the right -->
-                            <div class="direct-chat-msg right">
-                                <div class="direct-chat-infos clearfix">
-                                    <span class="direct-chat-name float-right">Текущий пользователь</span>
-                                    <span class="direct-chat-timestamp float-left">Время</span>
-                                </div>
-                                <!-- /.direct-chat-infos -->
-                                <img class="direct-chat-img" src="/public/dist/img/man.png" alt="Аватар текущего пользователя">
-                                <!-- /.direct-chat-img -->
-                                <div class="direct-chat-text">
-                                    Сообщение текущего пользователя!
-                                </div>
-                                <!-- /.direct-chat-text -->
+                <div class="modal fade" id="modal-secondary">
+                    <div class="modal-dialog">
+                        <div class="modal-content bg-white">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Чат</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
                             </div>
-                            <!-- /.direct-chat-msg -->
-                        </div>
-                        <!--/.direct-chat-messages-->
+                            <div class="modal-body">
+                                <div class="card direct-chat direct-chat-success">
+                                    <div class="card-body">
+                                        <!-- Conversations are loaded here -->
+                                        <div class="direct-chat-messages">
+                                            <!-- Message. Default to the left -->
+                                            <div class="direct-chat-msg">
+                                                <div class="direct-chat-infos clearfix">
+                                                    <span class="direct-chat-name float-left">Отправитель</span>
+                                                    <span class="direct-chat-timestamp float-right">Время</span>
+                                                </div>
+                                                <!-- /.direct-chat-infos -->
+                                                <img class="direct-chat-img" src="/public/dist/img/man.png" alt="Аватар отправителя">
+                                                <!-- /.direct-chat-img -->
+                                                <div class="direct-chat-text">
+                                                    Текст сообщения отправителя
+                                                </div>
+                                                <!-- /.direct-chat-text -->
+                                            </div>
+                                            <!-- /.direct-chat-msg -->
 
-                        <!-- Contacts are loaded here -->
-                        <div class="direct-chat-contacts">
-                            <ul class="contacts-list">
-                                <li>
-                                    <a href="#">
-                                        <img class="contacts-list-img" src="/public/dist/img/man.png" alt="Аватар пользователя">
-
-                                        <div class="contacts-list-info">
-                              <span class="contacts-list-name">
-                                Ник
-                                <small class="contacts-list-date float-right">Дата отправки последнего сообщения</small>
-                              </span>
-                                            <span class="contacts-list-msg">Текст сообщения</span>
+                                            <!-- Message to the right -->
+                                            <div class="direct-chat-msg right">
+                                                <div class="direct-chat-infos clearfix">
+                                                    <span class="direct-chat-name float-right">Текущий пользователь</span>
+                                                    <span class="direct-chat-timestamp float-left">Время</span>
+                                                </div>
+                                                <!-- /.direct-chat-infos -->
+                                                <img class="direct-chat-img" src="/public/dist/img/man.png" alt="Аватар текущего пользователя">
+                                                <!-- /.direct-chat-img -->
+                                                <div class="direct-chat-text">
+                                                    Сообщение текущего пользователя!
+                                                </div>
+                                                <!-- /.direct-chat-text -->
+                                            </div>
+                                            <!-- /.direct-chat-msg -->
                                         </div>
-                                        <!-- /.contacts-list-info -->
-                                    </a>
-                                </li>
-                            </ul>
-                            <!-- /.contacts-list -->
-                        </div>
-                        <!-- /.direct-chat-pane -->
-                    </div>
-                    <!-- /.card-body -->
-                    <div class="card-footer">
-                        <form action="#" method="post">
-                            <div class="input-group">
-                                <input type="text" name="message" placeholder="Текст сообщения" class="form-control">
-                                <span class="input-group-append">
+                                        <!--/.direct-chat-messages-->
+                                    </div>
+                                    <!-- /.card-body -->
+                                    <div class="card-footer">
+                                        <form action="#" method="post">
+                                            <div class="input-group">
+                                                <input type="text" name="message" placeholder="Текст сообщения" class="form-control">
+                                                <span class="input-group-append">
                           <button type="button" class="btn btn-success">Отправить</button>
                         </span>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <!-- /.card-footer-->
+                                </div>
                             </div>
-                        </form>
+                            <div class="modal-footer justify-content-between">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
                     </div>
-                    <!-- /.card-footer-->
+                    <!-- /.modal-dialog -->
                 </div>
             </div><!-- /.container-fluid -->
         </section>
