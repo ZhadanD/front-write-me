@@ -49,3 +49,5 @@ async function showChats() {
 }
 
 showChats()
+
+setInterval(async () => await showChats(), 1000)
