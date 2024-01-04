@@ -122,51 +122,21 @@
                                 </button>
                             </div>
                             <div class="modal-body">
+                                <div id="errors_or_success"></div>
+
                                 <div class="card direct-chat direct-chat-success">
                                     <div class="card-body">
                                         <!-- Conversations are loaded here -->
-                                        <div class="direct-chat-messages">
-                                            <!-- Message. Default to the left -->
-                                            <div class="direct-chat-msg">
-                                                <div class="direct-chat-infos clearfix">
-                                                    <span class="direct-chat-name float-left">Отправитель</span>
-                                                    <span class="direct-chat-timestamp float-right">Время</span>
-                                                </div>
-                                                <!-- /.direct-chat-infos -->
-                                                <img class="direct-chat-img" src="/public/dist/img/man.png" alt="Аватар отправителя">
-                                                <!-- /.direct-chat-img -->
-                                                <div class="direct-chat-text">
-                                                    Текст сообщения отправителя
-                                                </div>
-                                                <!-- /.direct-chat-text -->
-                                            </div>
-                                            <!-- /.direct-chat-msg -->
-
-                                            <!-- Message to the right -->
-                                            <div class="direct-chat-msg right">
-                                                <div class="direct-chat-infos clearfix">
-                                                    <span class="direct-chat-name float-right">Текущий пользователь</span>
-                                                    <span class="direct-chat-timestamp float-left">Время</span>
-                                                </div>
-                                                <!-- /.direct-chat-infos -->
-                                                <img class="direct-chat-img" src="/public/dist/img/man.png" alt="Аватар текущего пользователя">
-                                                <!-- /.direct-chat-img -->
-                                                <div class="direct-chat-text">
-                                                    Сообщение текущего пользователя!
-                                                </div>
-                                                <!-- /.direct-chat-text -->
-                                            </div>
-                                            <!-- /.direct-chat-msg -->
-                                        </div>
+                                        <div class="direct-chat-messages"></div>
                                         <!--/.direct-chat-messages-->
                                     </div>
                                     <!-- /.card-body -->
                                     <div class="card-footer">
                                         <form action="#" method="post">
                                             <div class="input-group">
-                                                <input type="text" name="message" placeholder="Текст сообщения" class="form-control">
+                                                <input type="text" id="message" name="message" placeholder="Текст сообщения" class="form-control">
                                                 <span class="input-group-append">
-                          <button type="button" class="btn btn-success">Отправить</button>
+                          <button type="button" class="btn btn-success" onclick="sendMessage()">Отправить</button>
                         </span>
                                             </div>
                                         </form>
@@ -175,7 +145,7 @@
                                 </div>
                             </div>
                             <div class="modal-footer justify-content-between">
-                                <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
+                                <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="closeChat()">Закрыть</button>
                             </div>
                         </div>
                         <!-- /.modal-content -->
