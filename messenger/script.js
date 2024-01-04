@@ -26,11 +26,16 @@ async function showChats() {
 
     for (let i = 0; i < chats.length; i++) {
         cardsChats += `
-        <div class="row mb-4">
+        <div class="row mb-4 border-bottom border-success pt-3 pb-3">
                                 <div class="col">
-                                    <img class="contacts-list-img" src="/public/dist/img/man.png" alt="Аватар пользователя">
-
-                                    <h4>${chats[i].username}</h4>
+                                <div class="row">
+                                    <div class="col">
+                                        <img class="img-circle" width="150" src="/public/dist/img/man.png" alt="Аватар пользователя">
+                                    </div>
+                                    <div class="col">
+                                        <h4>${chats[i].username}</h4>
+                                    </div>
+                                </div>
                                 </div>
                                 <div class="col">
                                     <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal-secondary">
