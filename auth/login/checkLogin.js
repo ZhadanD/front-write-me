@@ -1,5 +1,5 @@
 async function getToken() {
-    const url = 'http://127.0.0.1:8000/api/auth/login'
+    const url = 'http://dvzh07mail.temp.swtest.ru/api/auth/login'
 
     let user = {
         email: document.getElementById('email').value,
@@ -20,6 +20,6 @@ async function getToken() {
         document.querySelector('.error').innerHTML = `<h4 class="text-danger">Неверные учетные данные</h4>`
     } else {
         localStorage.setItem('token', 'Bearer ' + result.access_token)
-        document.location.href = '../../'
+        document.location.href = '../../index.html'
     }
 }

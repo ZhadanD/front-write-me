@@ -1,5 +1,5 @@
 async function getDashboard() {
-    let url = 'http://127.0.0.1:8000/api/admin/dashboard'
+    let url = 'http://dvzh07mail.temp.swtest.ru/api/admin/dashboard'
 
     let response = await fetch(url, {
         method: 'GET',

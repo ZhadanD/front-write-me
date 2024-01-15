@@ -31,7 +31,7 @@ function getPagination(result) {
     document.getElementById('my_pagination').innerHTML = pagination
 }
 
-async function getUsers(url = 'http://127.0.0.1:8000/api/admin/users') {
+async function getUsers(url = 'http://dvzh07mail.temp.swtest.ru/api/admin/users') {
     let response = await fetch(url, {
         method: 'GET',
         headers: {
@@ -57,7 +57,7 @@ async function createUser() {
         password: document.getElementById('password').value
     }
 
-    let url = 'http://127.0.0.1:8000/api/admin/users'
+    let url = 'http://dvzh07mail.temp.swtest.ru/api/admin/users'
 
     let response = await fetch(url, {
         method: 'POST',
@@ -93,7 +93,7 @@ async function createUser() {
 async function deleteUser(id) {
     let decision = confirm('Вы точно хотите удалить пользователя?')
 
-    let url = `http://127.0.0.1:8000/api/admin/users/${id}`
+    let url = `http://dvzh07mail.temp.swtest.ru/api/admin/users/${id}`
 
     if(decision) {
         let response = await fetch(url, {

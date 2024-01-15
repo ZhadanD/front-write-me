@@ -1,5 +1,5 @@
 async function getProfile() {
-    let url = 'http://127.0.0.1:8000/api/users/profile';
+    let url = 'http://dvzh07mail.temp.swtest.ru/api/users/profile';
 
     let response = await fetch(url, {
         method: 'GET',
@@ -11,7 +11,7 @@ async function getProfile() {
 
     if(response.status === 401) {
         localStorage.removeItem('token')
-        document.location.href = 'auth/login'
+        document.location.href = '/auth/login/index.html'
     }
 
     let result = await response.json();

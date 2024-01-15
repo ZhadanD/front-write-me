@@ -1,5 +1,5 @@
 async function logout() {
-    const url = 'http://127.0.0.1:8000/api/auth/logout'
+    const url = 'http://dvzh07mail.temp.swtest.ru/api/auth/logout'
 
     await fetch(url, {
         method: 'POST',

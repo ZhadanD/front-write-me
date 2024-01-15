@@ -7,7 +7,7 @@ async function register() {
         return
     }
 
-    const url = 'http://127.0.0.1:8000/api/auth/register'
+    const url = 'http://dvzh07mail.temp.swtest.ru/api/auth/register'
 
     let user = {
         name: document.getElementById('name').value,
@@ -34,7 +34,7 @@ async function register() {
 
         document.querySelector('.error').innerHTML = errors
     } else {
-        let response = await fetch('http://127.0.0.1:8000/api/auth/login', {
+        let response = await fetch('http://dvzh07mail.temp.swtest.ru/api/auth/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json;charset=utf-8'
@@ -48,6 +48,6 @@ async function register() {
         let result = await response.json();
 
         localStorage.setItem('token', 'Bearer ' + result.access_token)
-        document.location.href = '../../'
+        document.location.href = '../../index.html'
     }
 }

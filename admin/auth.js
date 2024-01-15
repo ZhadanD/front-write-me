@@ -1,7 +1,7 @@
 if(!localStorage.getItem('token')) document.location.href = '../auth/login/index.html'
 
 async function checkAdmin() {
-    const url = 'http://127.0.0.1:8000/api/admin/dashboard'
+    const url = 'http://dvzh07mail.temp.swtest.ru/api/admin/dashboard'
 
     let response = await fetch(url, {
         method: 'GET',

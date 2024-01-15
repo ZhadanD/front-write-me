@@ -1,5 +1,5 @@
 async function makeFriend(friendId) {
-    let url = 'http://127.0.0.1:8000/api/users/make_friend'
+    let url = 'http://dvzh07mail.temp.swtest.ru/api/users/make_friend'
 
     let response = await fetch(url, {
         method: 'POST',
@@ -12,7 +12,7 @@ async function makeFriend(friendId) {
         })
     });
 
-    if(response.status === 401) document.location.href = '/auth/login'
+    if(response.status === 401) document.location.href = '/auth/login/index.html'
 
     let result = await response.json()
 
@@ -30,11 +30,20 @@ function getTable(result) {
 
     for (let i = 0; i < result.data.length; i++) {
         table += `
-        <tr>
-            <td width="150"><img width="150" src="/public/dist/img/man.png" alt="Аватар пользователя" class="img-circle img-fluid"></td>
-            <td width="250">${result.data[i].name}</td>
-            <td width="100" id="${result.data[i].id}">${result.data[i].isFriend ? '<button disabled class="btn btn-warning">Уже дружите</button>' : `<button type="button" class="btn btn-success" onclick="makeFriend(${result.data[i].id})">Подружиться</button>`}</td>
-        </tr>`
+        <hr>
+        <div class="row mb-2">
+            <div class="col">
+                <img src="/public/dist/img/man.png" alt="Аватар пользователя" style="max-width: 130px" class="img-circle img-fluid">
+            </div>
+            <div class="col">
+                <div class="col">
+                    ${result.data[i].name}
+                </div>
+                <div class="col" id="${result.data[i].id}">
+                    ${result.data[i].isFriend ? '<button disabled class="btn btn-warning">Уже дружите</button>' : `<button type="button" class="btn btn-success" onclick="makeFriend(${result.data[i].id})">Подружиться</button>`}
+                </div>
+            </div>
+        </div>`
     }
 
     document.getElementById('table_users').innerHTML = table
@@ -54,7 +63,7 @@ function getPagination(result) {
     document.getElementById('my_pagination').innerHTML = pagination
 }
 
-async function getUsers(url = 'http://127.0.0.1:8000/api/users/search_friends') {
+async function getUsers(url = 'http://dvzh07mail.temp.swtest.ru/api/users/search_friends') {
     let response = await fetch(url, {
         method: 'GET',
         headers: {

@@ -1,5 +1,5 @@
 async function getChats() {
-    let url = 'http://127.0.0.1:8000/api/messages/chats';
+    let url = 'http://dvzh07mail.temp.swtest.ru/api/messages/chats';
 
     let response = await fetch(url, {
         method: 'GET',
@@ -11,7 +11,7 @@ async function getChats() {
 
     if (response.status === 401) {
         localStorage.removeItem('token')
-        document.location.href = '/auth/login'
+        document.location.href = '/auth/login/index.html'
     }
 
     let result = await response.json()
@@ -20,7 +20,7 @@ async function getChats() {
 }
 
 async function getMessagesChat(chatId) {
-    let url = 'http://127.0.0.1:8000/api/messages/chats/' + chatId;
+    let url = 'http://dvzh07mail.temp.swtest.ru/api/messages/chats/' + chatId;
 
     let response = await fetch(url, {
         method: 'GET',
@@ -32,7 +32,7 @@ async function getMessagesChat(chatId) {
 
     if (response.status === 401) {
         localStorage.removeItem('token')
-        document.location.href = '/auth/login'
+        document.location.href = '/auth/login/index.html'
     }
 
     let result = await response.json()
@@ -88,7 +88,7 @@ async function sendMessage() {
         message: document.getElementById('message').value
     }
 
-    let url = 'http://127.0.0.1:8000/api/messages'
+    let url = 'http://dvzh07mail.temp.swtest.ru/api/messages'
 
     let response = await fetch(url, {
         method: 'POST',
@@ -124,7 +124,7 @@ async function sendMessage() {
         document.querySelector('.direct-chat-messages').innerHTML += myNewMessage
 
         document.getElementById('message').value = ''
-    } else if(response.status === 401) document.location.href = '/auth/login'
+    } else if(response.status === 401) document.location.href = '/auth/login/index.html'
 }
 
 async function showChats() {

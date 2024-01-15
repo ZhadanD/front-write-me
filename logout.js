@@ -1,5 +1,5 @@
 async function logout() {
-    const url = 'http://127.0.0.1:8000/api/auth/logout'
+    const url = 'http://dvzh07mail.temp.swtest.ru/api/auth/logout'
 
     await fetch(url, {
         method: 'POST',
@@ -11,5 +11,5 @@ async function logout() {
 
     localStorage.removeItem('token')
 
-    document.location.href = '/auth/login'
+    document.location.href = '/auth/login/index.html'
 }
